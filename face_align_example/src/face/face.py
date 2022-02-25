@@ -56,6 +56,7 @@ def detect_landmark_dlib(image):
         filename = 'shape_predictor_68_face_landmarks.dat'
         source = files('face').joinpath(filename)
         path = str(source)
+        global predictor
         predictor = dlib.shape_predictor(path)
     
     image = np.array(image)
